@@ -19,7 +19,7 @@ add_library(raylib STATIC
     ${RS}/rcore.c ${RS}/rshapes.c ${RS}/rtextures.c ${RS}/rtext.c
     ${RS}/rmodels.c ${RS}/raudio.c ${RS}/utils.c)
 target_compile_definitions(raylib PUBLIC PLATFORM_ANDROID GRAPHICS_API_OPENGL_ES2)
-target_include_directories(raylib PUBLIC ${RS} ${RS}/external ${GLUE_DIR})
+target_include_directories(raylib PUBLIC ${RS} ${GLUE_DIR})
 target_compile_options(raylib PRIVATE -ffunction-sections -fdata-sections -Wno-everything)
 
 add_library(sandstrike SHARED main.cpp ${GLUE_DIR}/android_native_app_glue.c)
